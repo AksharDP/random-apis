@@ -29,7 +29,7 @@ const userAgents: Record<BrowserType, string[]> = {
   ]
 };
 
-const app = new Hono().basePath('/api')
+const app = new Hono()
 
 app.get('/', (c) => {
   return c.json({ message: 'Hello Hono!' })
